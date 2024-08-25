@@ -1,0 +1,22 @@
+/*----------------------------------------*/
+/*  31. 404
+/*----------------------------------------*/
+.error-page {
+    &__content {
+        h2 {
+            font-size: 50px;
+            margin-bottom: 23px;
+            letter-spacing: -1px;
+            @include respond(md) {
+                font-size: 40px;
+            }
+            @include respond(xs) {
+                font-size: 30px;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}

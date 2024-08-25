@@ -1,0 +1,36 @@
+.icon-img{
+    display: flex;
+    justify-content: center;
+}
+.single-card{
+    width: 150px;
+}
+
+.single-card p{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+    .single-card {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 768px) {
+    .single-card {
+        flex: 0 1 calc(33.333% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    .single-card {
+        flex: 0 1 calc(25% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .single-card {
+        flex: 0 1 calc(20% - 20px);
+    }
+}

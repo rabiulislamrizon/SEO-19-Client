@@ -1,0 +1,266 @@
+/*----------------------------------------*/
+/*  05. feature
+/*----------------------------------------*/
+.xb-feature {
+    &__wrap {
+        margin: 0 -45px;
+        margin-top: -70px;
+        @include respond(xs) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: -20px;
+        }
+    }
+}
+.feature-pb {
+    padding-bottom: 250px;
+}
+.xb-feature1 {
+    .xb-item {
+        &--inner {
+            background-color: #0F2C31;
+            padding: 40px 30px;
+            @include border-radius(20px);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--holder {
+            width: calc(100% - 70px);
+        }
+        &--icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            @include border-radius(50%);
+            background-color: #052328;
+            @include center;
+        }
+        &--title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--color-white);
+            letter-spacing: -0.48px;
+        }
+        &--content {
+            color: #8DB7BE;
+        }
+    }
+}
+.lw-feature-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 57.6%;
+    height: 100%;
+    background-image: url(../img/bg/lw_feat_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    @include respond(md) {
+        position: relative;
+        width: 100%;
+        min-height: 400px;
+    }
+}
+.lw-feat-funfact {
+    &__wrap {
+        flex-wrap: nowrap;
+        @include respond(md) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        @include respond(xs) {
+            flex-wrap: wrap;
+        }
+    }
+    min-width: 330px;
+    background-color: #121A1B;
+    width: 50%;
+    padding: 50px;
+    @include respond(lg) {
+        min-width: 310px;
+    }
+    @include respond(xs) {
+        width: 100%;
+    }
+    &.active {
+        background-color: var(--color-law);
+    }
+    .number {
+        color: var(--color-white);
+        font-size: 52px;
+        margin-bottom: 6px;
+        @include respond(lg) {
+            font-size: 45px;
+        }
+        .suffix {
+            @include transform(translateY(6px));
+            display: inline-block;
+            padding-left: 3px;
+        }
+    }
+    .title {
+        font-size: 22px;
+        color: var(--color-white);
+        font-family: var(--font-body);
+    }
+}
+.xb-lw-list {
+    li {
+        font-size: 18px;
+        color: #121A1B;
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+        i {
+            margin-right: 20px;
+            color: var(--color-law);
+        }
+    }
+}
+.lw-feat-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.xb-feature2 {
+    width: 50%;
+    padding: 0 45px;
+    @include respond(xs) {
+        padding: 0 13px;
+        margin-top: 30px;
+    }
+    &:hover {
+        .xb-item--icon::before {
+            opacity: 1;
+        }
+    }
+    .xb-item {
+        &--icon {
+            width: 71px;
+            height: 71px;
+            background-color: #14CAF4;
+            @include border-radius(50%);
+            @include center;
+            margin-bottom: 40px;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                width: 91px;
+                height: 91px;
+                @include border-radius(50%);
+                border: 1px dashed rgba(255, 255, 255, 0.28);
+                content: "";
+                animation: spin 15s infinite linear;
+                -webkit-animation: spin 15s infinite linear;
+                opacity: 0;
+                @include transition(.3s);
+            }
+        }
+        &--title {
+            color: var(--color-white);
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 20px;
+            letter-spacing: -0.4px;
+        }
+        &--content {
+            color: #BCBFEE;
+        }
+    }
+}
+.mr-feature {
+    .xb-item {
+        &--inner {
+            text-align: center;
+            position: relative;
+            padding: 32px 30px 40px;
+            @include respond(lg) {
+                padding: 32px 65px 40px;
+            }
+            @include respond(md) {
+                padding: 32px 20px 40px;
+            }
+        }
+        &--icon {
+            margin-bottom: 19px;
+            min-height: 113px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include respond(md) {
+                margin-bottom: 13px;
+            }
+        }
+        &--bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            
+        }
+        &--title {
+            margin-bottom: 70px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            @include respond(md) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+.mr-feature-shape {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+}
+.feature-area {
+    padding-right: 100px;
+    @include respond(xs) {
+        padding-right: 0;
+    }
+}
+.xb-feature-item {
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 0;
+        right: -47%;
+        width: 1px;
+        height: 100%;
+        background-color: #E9E9E9;
+        content: "";
+        @include respond(lg) {
+            display: none;
+        }
+    }
+    &:last-child::before {
+        display: none;
+    }
+    .xb-item {
+        &--icon {
+            background-color: rgba(32, 40, 188, 0.1);
+            width: 60px;
+            height: 60px;
+            @include border-radius(50%);
+            margin-bottom: 25px;
+            @include center;
+        }
+        &--title {
+            font-size: 20px;
+            margin-bottom: 17px;
+        }
+    }
+}
+.feature-sec-title {
+    @include respond(md) {
+        padding-left: 0;
+    }
+}

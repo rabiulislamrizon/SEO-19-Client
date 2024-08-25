@@ -1,0 +1,212 @@
+/*----------------------------------------*/
+/*  20. portfolio
+/*----------------------------------------*/
+.bc-portfolio {
+    margin-bottom: 10px;
+    .xb-item {
+        &--inner {
+            padding: 60px 150px;
+            margin-left: -150px;
+            margin-right: -150px;
+            border: 1px solid #EDEDED;
+            @include border-radius(50px);
+            @include transition(.3s);
+            @include respond(xs) {
+                flex-direction: column-reverse;
+                padding: 20px;
+                margin: 0;
+                @include border-radius(5px);
+            }
+            &:hover {
+                background-color: #FAFAFA;
+            }
+        }
+        &--holder {
+            width: 470px;
+            padding-right: 50px;
+            @include respond(xs) {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+        &--cat {
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 37px;
+            font-size: 16px;
+            font-weight: 700;
+            @include respond(xs) {
+                margin-bottom: 10px;
+            }
+        }
+        &--title {
+            font-size: 30px;
+            a {
+                color: currentColor;
+            }
+        }
+        &--content {
+            color: #03080B;
+        }
+        &--img {
+            width: calc(100% - 470px);
+            @include border-radius(20px);
+            overflow: hidden;
+            @include respond(xs) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__menu {
+        text-align: right;
+        margin: -5px;
+        margin-bottom: 15px;
+        max-width: 670px;
+        @include respond(laptop) {
+            max-width: 600px;
+        }
+        @include respond(xs) {
+            text-align: left;
+        }
+        button {
+            font-size: 14px;
+            color: #03080B;
+            font-weight: 700;
+            border: 1px solid #EDEDED;
+            @include border-radius(12px);
+            letter-spacing: 0.7px;
+            padding: 13px 40px;
+            text-transform: uppercase;
+            @include transition(.3s);
+            background: transparent;
+            margin: 5px;
+            @include respond(laptop) {
+                padding: 12px 28px;
+            }
+            @include respond(xs) {
+                font-size: 12px;
+                padding: 6px 20px;
+            }
+            &.active,
+            &:hover {
+                background-color: #F1F1F1;
+            }
+        }
+    }
+    &__btn {
+        a {
+            padding: 22px 42px;
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    }
+}
+.xb-portfolio {
+    &:hover {
+        .xb-item--img img {
+            @include transform(scale(1.1));
+        }
+    }
+    .xb-item {
+        &--img {
+            overflow: hidden;
+            img {
+                @include transition(0.4s cubic-bezier(0.25, 1, 0.5, 1));
+            }
+        }
+        &--holder {
+            border: 1px solid #E7E9EE;
+        }
+        &--content {
+            border: 1px solid #E7E9EE;
+            margin: 5px;
+            padding: 32px;
+            text-align: center;
+        }
+        &--cat {
+            font-size: 14px;
+            color: #888686;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        &--title {
+            font-size: 26px;
+            letter-spacing: -0.52px;
+            text-transform: capitalize;
+            @include respond(xs) {
+                font-size: 22px;
+                letter-spacing: 0;
+            }
+            a {
+                color: currentColor;
+            }
+        }
+    }
+    &__menu {
+        border: 1px solid #E7E9EE;
+        padding: 7px;
+        display: inline-block;
+        button {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #888686;
+            padding: 9px 40px;
+            background-color: transparent;
+            &.active {
+                background-color: var(--color-primary);
+                color: var(--color-white);
+            }
+        }
+    }
+}
+.portfolio-single {
+    &__content {
+        h2 {
+            margin-bottom: 35px;
+            font-size: 35px;
+            @include respond(xs) {
+                font-size: 28px;
+            }
+        }
+        p {
+            font-weight: 500;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__meta {
+        border-top: 1px solid #E7E9EE;
+        padding-top: 5px;
+        li {
+            font-size: 16px;
+            margin-top: 20px;
+            strong {
+                color: #191B1E;
+                margin-right: 11px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__list {
+        width: 70%;
+        @include respond(md) {
+            width: 100%;
+        }
+        li {
+            width: 50%;
+            margin-bottom: 15px;
+            @include respond(xs) {
+                width: 100%;
+            }
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+}

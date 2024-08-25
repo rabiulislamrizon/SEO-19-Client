@@ -1,0 +1,167 @@
+/*----------------------------------------*/
+/*  13. pricing
+/*----------------------------------------*/
+.lw-pricing {
+    .xb-item {
+        &--inner {
+            padding: 20px;
+            border: 1px solid #F2F3F4;
+            &:hover {
+                .xb-item {
+                    &--price {
+                        background-color: var(--color-law);
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+        &--img {
+            overflow: hidden;
+        }
+        &--holder {
+           position: relative;
+           padding: 45px 5px 16px 5px;
+        }
+        &--price {
+            color: var(--color-law);
+            box-shadow: 0px 4px 12px rgba(199, 199, 201, 0.25);
+            display: inline-block;
+            padding: 7px 20px;
+            background-color: var(--color-white);
+            font-size: 18px;
+            font-weight: 700;
+            position: absolute;
+            top: -18px;
+            left: 0;
+            line-height: 1.2;
+            @include transition(.3s);        }
+        &--title {
+            font-style: 24px;
+            margin-bottom: 10px;
+            font-family: var(--font-body);
+            a {
+                color: currentColor;
+            }
+        }
+        &--content {
+            font-size: 16px;
+            letter-spacing: -0.16px;
+            line-height: 26px;
+        }
+    }
+    
+}
+.xb-pricing-nav {
+    background-color: #DDE1EA;
+    @include border-radius(65px);
+    padding: 6px;
+    border: 1px solid #D7DCE5;
+    display: inline-flex;
+    .nav-item {
+        .nav-link {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #191B1E;
+            font-weight: 700;
+            padding: 11px 30px;
+            @include border-radius(32px);
+            span {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                background-color: #FF5050;
+                @include border-radius(29px);
+                padding: 1px 7px;
+                line-height: 1.2;
+                color: var(--color-white);
+                margin-left: 10px;
+            }
+            &.active {
+                background-color: var(--color-white);
+                filter: drop-shadow(0px 4px 4px rgba(116, 126, 148, 0.10));
+            }
+        }
+    }
+}
+.xb-pricing {
+    background-color: var(--color-white);
+    padding: 40px 30px;
+    position: relative;
+    border: 1px solid #EDEDED;
+    box-shadow: 5px 5px 30px 0px rgba(224, 221, 221, 0.35);
+    overflow: hidden;
+    z-index: 1;
+    .xb-item {
+        &--title {
+            color: var(--color-secondary);
+            background-color: rgba(21, 203, 244, 0.1);
+            font-weight: 600;
+            @include border-radius(3px);
+            display: inline-block;
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 4px 15px;
+            margin-bottom: 10px;
+        }
+        &--subtitle {
+            font-size: 18px;
+            color: #888686;
+            margin-bottom: 28px;
+        }
+        &--price {
+            letter-spacing: -1px;
+            font-size: 50px;
+            border-bottom: 1px solid #D9D9D9;
+            padding-bottom: 28px;
+            margin-bottom: 30px;
+            span {
+                font-size: 16px;
+                color: #888686;
+                font-weight: 400;
+                font-family: var(--font-body);
+            }
+        }
+        &--list {
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                & > span {
+                    @include transform(translateY(-1px));
+                }
+                &.deactive {
+                    opacity: 0.5;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        &--btn {
+            width: 100%;
+            text-align: center;
+            background-color: var(--color-secondary);
+            &:hover {
+                background-color: var(--color-primary);
+            }
+        }
+        &--icon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            z-index: -1;
+            @include respond(lg) {
+                max-width: 100px;
+            }
+        }
+    }
+    &.primary {
+        border: 5px solid var(--color-primary);
+        padding-top: 35px;
+        padding-bottom: 35px;
+        .xb-item--btn {
+            background-color: var(--color-primary);
+        }
+    }
+}

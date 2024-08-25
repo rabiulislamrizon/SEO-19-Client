@@ -1,0 +1,14 @@
+.single-card{
+    
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.admin-card{
+    margin: 2px;
+}
+.admin-cards{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   justify-content: center;
+}

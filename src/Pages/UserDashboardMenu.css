@@ -1,0 +1,8 @@
+.user-cards img {
+    width: 30px;
+    }
+
+  .icon-img{
+    display: flex;
+    justify-content: center;
+}

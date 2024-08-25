@@ -1,0 +1,426 @@
+/*----------------------------------------*/
+/*  10. contact
+/*----------------------------------------*/
+.xb-contact {
+    &__wrap {
+        padding: 70px 80px;
+        padding-bottom: 80px;
+        background-color: var(--color-white);
+        position: relative;
+        z-index: 1;
+        @include respond(xs) {
+            padding: 30px 25px;
+        }
+    }
+    .xb-item {
+        &--field {
+            margin-bottom: 25px;
+            position: relative;
+            & > span {
+                position: absolute;
+                top: 22px;
+                left: 25px;
+                z-index: 1;
+            }
+            input,
+            textarea {
+                padding-left: 57px;
+                &:focus {
+                    @include placeholder(#191B1E);
+                }
+            }
+            textarea {
+                min-height: 145px;
+            }
+            button {
+                height: 75px;
+            }
+            .nice-select {
+                padding-left: 57px;
+                @include border-radius(0);
+                &::after {
+                    border-bottom: 2px solid #B3B2B2;
+                    border-right: 2px solid #B3B2B2;
+                    height: 8px;
+                    width: 8px;
+                    right: 27px;
+                }
+                &.open {
+                    .current {
+                        color: #191B1E;
+                        @include transition(.3s);
+                    }
+                }
+            }
+        }
+    }
+    &__shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        @include respond(md) {
+            display: none;
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        @include respond(md) {
+            display: none;
+        }
+    }
+    &__area {
+        border: 1px solid #E7E9EE;
+        background-color: var(--color-white);
+        padding: 50px;
+        margin-bottom: -100px;
+        z-index: 2;
+        position: relative;
+        @include respond(xs) {
+            padding: 30px 20px;
+        }
+    }
+}
+.contact-shape {
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &--1 {
+            top: 30%;
+        }
+        &--2 {
+            bottom: 21%;
+            right: 0;
+        }
+    }
+}
+
+.ins-contact-form {
+    &__wrap {
+        padding: 50px;
+        margin-right: 90px;
+        background-color: var(--color-white);
+        @include br-20;
+        @include respond(xs) {
+            padding: 25px;
+            margin-right: 0;
+        }
+        .sec-title {
+            .title {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+    .xb-item {
+        &--field {
+            margin-bottom: 20px;
+            position: relative;
+            & > span,
+            .icon {
+                position: absolute;
+                top: 21px;
+                left: 20px;
+                display: inline-block;
+                line-height: 1;
+                z-index: 1;
+            }
+            input,
+            textarea {
+                padding: 15px 46px 18px;
+                background-color: #F8F8F8;
+                @include border-radius(10px);
+                height: 60px;
+                font-size: 16px;
+                @include placeholder(#575757);
+                @include transition(.3s);
+                &:focus {
+                    @include placeholder(#052328);
+                }
+            }
+            textarea {
+                min-height: 150px;
+            }
+            .nice-select {
+                padding: 0 46px;
+                margin-bottom: 20px;
+                background-color: #F8F8F8;
+                border: 0;
+                font-size: 16px;
+                height: 60px;
+                line-height: 60px;
+                min-height: 60px;
+                &::after {
+                    border-bottom: 1.9px solid #575757;
+                    border-right: 1.9px solid #575757;
+                    height: 7px;
+                    width: 7px;
+                }
+            }
+        }
+    }
+}
+.ins-location-map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    @include respond(laptop) {
+        top: auto;
+        bottom: -12%;
+    }
+    img {
+        @include respond(laptop) {
+            height: 80%;
+            object-fit: cover;
+        }
+    }
+    @include respond(lg) {
+        position: relative;
+        width: 100%;
+        margin-bottom: -250px;
+        margin-top: -100px;
+    }
+    @include respond(xs) {
+        margin-bottom: -150px;
+        margin-top: -0;
+    }
+}
+.ins-location-inner {
+    .map {
+        position: absolute;
+        &--1 {
+            top: 33%;
+            left: 33%;
+            @include respond(laptop) {
+                top: 20%;
+                left: 35%;
+            }
+            @include respond(xs) {
+                top: 24%;
+                left: 29%;
+            }
+        }
+        &--2 {
+            bottom: 21%;
+            left: 26%;
+            @include respond(laptop) {
+                bottom: 41%;
+            }
+        }
+        &--3 {
+            bottom: 42%;
+            left: 47%;
+            @include respond(laptop) {
+                bottom: 54%;
+                left: 55%;
+            }
+            @include respond(xs) {
+                bottom: 46%;
+                left: 59%;
+
+            }
+        }
+        .icon {
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+    .map-info {
+        background-color: var(--color-white);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        position: relative;
+        top: -63px;
+        left: -23px;
+        display: flex;
+        align-items: center;
+        padding: 20px 32px;
+        @include transform(translateY(-10px));
+        box-shadow: 1px 9px 25px rgba(169, 169, 169, 0.46);
+        font-size: 25px;
+        font-weight: 600;
+        color: #052328;
+        @include border-radius(7px);
+        &::before {
+            position: absolute;
+            bottom: -54px;
+            left: 0;
+            background-image: url(../img/shape/map_arrow.png);
+            width: 73px;
+            height: 71px;
+            content: "";
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+    .active {
+        & ~ .map-info {
+            opacity: 1;
+            visibility: visible;
+            @include transform(translateY(0px));
+        }
+    }
+    &.style-law {
+        .map {
+            &--2 {
+                @media (min-width: 1400px) {
+                    bottom: 25%;
+                }
+            }
+            &--3 {
+                @media (min-width: 1400px) {
+                    bottom: 46%;
+                }
+            }
+        }
+    }
+}
+.lw-contact {
+    &__inner {
+        padding: 50px;
+        background-color: var(--color-white);
+        filter: drop-shadow(0px 16px 17px rgba(216, 216, 216, 0.25));
+        border: 1px solid #EDF3F5;
+        margin-right: -20px;
+        .title {
+            font-size: 45px;
+            color: var(--color-white);
+            margin-bottom: 40px;
+        }
+    }
+}
+.lw-contact-form {
+    .xb-item {
+        &--field {
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            input,
+            .nice-select,
+            textarea {
+                background-color: #F2F3F4;
+                @include border-radius(0);
+            }
+            textarea {
+                min-height: 132px;
+            }
+            .nice-select {
+                &::after {
+                    border-bottom: 2px solid #7B7B7B;
+                    border-right: 2px solid #7B7B7B;
+                    height: 8px;
+                    width: 8px;
+                    right: 23px;
+                }
+            }
+            .icon {
+                top: 18px;
+            }
+        }
+    }
+}
+.lw-contact-bg {
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background-color: #F2F3F4;
+        content: "";
+    }
+}
+.lw-contact-shape {
+    position: absolute;
+    bottom: 12%;
+    right: 0;
+}
+.ad-contact {
+    padding: 80px 100px;
+    padding-top: 70px;
+    @include border-radius(20px);
+    background-color: var(--color-white);
+    overflow: hidden;
+    @include respond(md) {
+        padding: 50px;
+    }
+    @include respond(xs) {
+        padding: 40px 25px;
+    }
+    .sec-title {
+        .title {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include respond(lg) {
+            max-width: 500px;
+        }
+        @include respond(md) {
+            display: none;
+        }
+    }
+    .xb-item {
+        &--field {
+            & > span {
+                top: 17px;
+            }
+        }
+    }
+    .ins-contact-form {
+        padding-right: 40px;
+        @include respond(md) {
+            padding-right: 0;
+        }
+    }
+}
+.xb-contact-info {
+    border: 1px solid #E7E9EE;
+    padding: 60px 15px 50px;
+    .xb-item {
+        &--icon {
+            font-size: 24px;
+            color: var(--color-primary);
+            background-color: rgba(32, 40, 188, 0.1);
+            width: 80px;
+            height: 80px;
+            @include center;
+            margin: 0 auto 22px;
+            @include border-radius(50%);
+        }
+        &--title {
+            font-size: 20px;
+            margin-bottom: 17px;
+        }
+        &--content {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+    }
+}
+.google-map {
+    height: 600px;
+    @include respond(lg) {
+        height: 400px;
+    }
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+}

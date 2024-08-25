@@ -1,0 +1,267 @@
+/*----------------------------------------*/
+/*  28. sec-title
+/*----------------------------------------*/
+.sec-title {
+    .subtitle {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        display: inline-block;
+        margin-bottom: 35px;
+        color: #191B1E;
+        img {
+            margin-right: 5px;
+            @include transform(translateY(-1px));
+        }
+    }
+    .title {
+        font-size: 50px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        &.title-big {
+            font-size: 65px;
+            @include respond(lg) {
+                font-size: 50px;
+            }
+            @include respond(xs) {
+                font-size: 40px;
+            }
+        }
+        @include respond(lg) {
+            font-size: 36px;
+        }
+        @include respond(xs) {
+            font-size: 28px;
+            line-height: 1.3;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+        a {
+            color: currentColor;
+            text-decoration: none;
+        }
+    }
+    &--advisor {
+        .subtitle {
+            color: #131217;
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 45px;
+            @include respond(lg) {
+                font-size: 40px;
+            }
+            @include respond(xs) {
+                font-size: 30px;
+            }
+            &.title-big {
+                font-size: 67px;
+                @include respond(lg) {
+                    font-size: 56px;
+                }
+                @include respond(md) {
+                    font-size: 45px;
+                }
+                @include respond(xs) {
+                    font-size: 32px;
+                }
+            }
+        }
+        p {
+            color: #6A6A7A;
+            &.text-20 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+    &--marketing {
+        .subtitle {
+            color: var(--color-white);
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 17px;
+            &::before {
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: 0;
+                width: 14px;
+                height: 9px;
+                @include border-radius(0px 5px 5px 0px);
+                content: "";
+                background-color: var(--color-marketing);
+            }
+        }
+        .title {
+            font-size: 48px;
+            color: var(--color-white);
+            letter-spacing: 0;
+            @include respond(lg) {
+                font-size: 40px;
+                line-height: 1.3;
+                letter-spacing: 0;
+            }
+            @include respond(xs) {
+                font-size: 28px;
+            }
+            span {
+                color: var(--color-marketing);
+            }
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &--business {
+        .title {
+            font-size: 60px;
+            letter-spacing: -1.8px;
+            line-height: 1.2;
+            @include respond(lg) {
+                font-size: 50px;
+                letter-spacing: 1px;
+            }
+            @include respond(md) {
+                font-size: 40px;
+                letter-spacing: 0.8px;
+            }
+            @include respond(xs) {
+                font-size: 30px;
+                letter-spacing: 0.2px;
+            }
+            span {
+                color: var(--color-business);
+            }
+        }
+        p {
+            font-weight: 500;
+            color: #33382C;
+            font-size: 18px;
+            line-height: 30px;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            &.text-default {
+                color: #888686;
+            }
+        }
+    }
+    &--md {
+        .title {
+            font-size: 50px;
+            @include respond(lg) {
+                font-size: 36px;
+            }
+        }
+    }
+    &--ins {
+        .subtitle {
+            font-size: 14px;
+            font-weight: 700;
+            color: #052328;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            margin-bottom: 19px;
+            padding: 0 23px;
+            position: relative;
+            &::before,
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                @include transform(translateY(-50%));
+                width: 15px;
+                height: 15px;
+                content: "";
+                background-image: url(../img/icon/ins_star.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &::after {
+                left: auto;
+                right: 0;
+            }
+        }
+        .title {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 54px;
+            letter-spacing: -1.32px;
+            @include respond(md) {
+                font-size: 36px;
+                line-height: 47px;
+                letter-spacing: 0;
+            }
+            @include respond(xs) {
+                font-size: 32px;
+                line-height: 44px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 400;
+            color: #8DB7BE;
+        }
+        &.sec-title--white {
+            .subtitle,
+            .title {
+                color: #F8F8F8;
+            }
+        }
+    }
+    &--white {
+        .subtitle, .title, p {
+            color: var(--color-white);
+        }
+    }
+    &--law {
+        .subtitle {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #7B7B7B;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 52px;
+            line-height: 60px;
+            color: #121A1B;
+            letter-spacing: -2.08px;
+            @include respond(lg) {
+                font-size: 40px;
+                line-height: 51px;
+                letter-spacing: -1px;
+            }
+            @include respond(xs) {
+                font-size: 34px;
+                line-height: 44px;
+                letter-spacing: 0;
+            }
+        }
+        p {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &.sec-title--white {
+            .subtitle,
+            .title,
+            p {
+                color: var(--color-white);
+            }
+            .subtitle {
+                &::before,
+                &::after {
+                    background-color: var(--color-white);
+                }
+            }
+        }
+    }
+}

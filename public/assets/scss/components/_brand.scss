@@ -1,0 +1,79 @@
+/*----------------------------------------*/
+/*  12. bramd
+/*----------------------------------------*/
+.ins-brand {
+    .xb-item {
+        &--brand {
+            a {
+                position: relative;
+                width: 100%;
+                height: 60px;
+                display: inline-block;
+                &:hover {
+                    @include transform(translateY(-10px));
+                    img {
+                        &:nth-child(1) {
+                            opacity: 0;
+                        }
+                        &:nth-child(2) {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+                @include transition(.3s);
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+            }
+            
+        }
+    }
+    &-slider {
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+}
+.ins-border-bottom {
+    border-bottom: 1px solid #0F2C31;
+}
+.client-section {
+    &__inner {
+        &.has-bg {
+            .client-section__item {
+                background: var(--Linear-logo, linear-gradient(285deg, #1F1F1F -15.2%, #1F1F1F 98.28%))
+            }
+        }
+        &.style-2 {
+            margin-left: -200px;
+            .client-section__item {
+                border-left: 1px solid #1F1F1F;
+            }
+        }
+    }
+    &__item {
+        min-width: 265px;
+        height: 225px;
+        @include center;
+        border-left: 1px solid #131313;
+        @include respond(md) {
+            min-width: 200px;
+            height: 200px;
+            img {
+                max-height: 100px;
+            }
+        }
+        @include respond(xs) {
+            min-width: 120px;
+            height: 120px;
+            img {
+                max-height: 56px;
+            }
+        }
+    }
+}

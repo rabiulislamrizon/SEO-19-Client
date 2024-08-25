@@ -1,0 +1,40 @@
+/*----------------------------------------*/
+/*  17. marquee
+/*----------------------------------------*/
+.js-marquee,
+.js-marquee-wrapper {
+    display: flex;
+    align-items: center;
+}
+.mr-marquee {
+    &__item {
+        margin-right: 85px;
+        display: flex;
+        align-items: center;
+        padding: 31px 0;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--color-white);
+        span {
+            margin-right: 10px;
+        }
+    }
+}
+.xb-marquee {
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 15px 27px;
+        @include border-radius(40px);
+        font-size: 22px;
+        margin-right: 60px;
+        box-shadow: 0px 16px 34px 0px rgba(109, 121, 152, 0.13);
+        @include respond(xs) {
+            margin-right: 15px;
+            padding: 10px 20px;
+            img {
+                height: 25px;
+            }
+        }
+    }
+}
